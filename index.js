@@ -19,9 +19,8 @@ let PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 
-
 app.get("/", (req, res) => {
-    res.json({ status: true })
+    res.json({ status: true, message: "Hello From Node.js Api 😊!" })
 })
 
 // All Api Routes 
