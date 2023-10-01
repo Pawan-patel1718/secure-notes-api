@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 const registerUser = async (req, res) => {
     let { email_id, password } = req.body;
     let jwtSecretKey = process.env.JWT_SECRET_KEY;
-
     try {
         let result = await connection.promise().query('INSERT INTO users SET ?', { email_id, password })
 
